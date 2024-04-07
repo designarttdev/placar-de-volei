@@ -47,6 +47,7 @@ Para obter uma cópia local instalada e funcionando, siga estas etapas simples d
 ```sh
 git clone https://github.com/designarttdev/placar-de-volei.git
 ```
+
 ---
 
 ### Contribuições
