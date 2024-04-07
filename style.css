@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  /* scrollbar-width: thin;
+  scrollbar-color: var(--cor-azul) var(--cor-set); */
+}
+
+:root {
+  --cor-america: #0a981e;
+  --cor-set: #8d8463;
+  --cor-sesi: #a7191c;
+  --cor-azul: #2112e7;
+}
+
+body {
+  background: #333;
+  text-transform: uppercase;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  height: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--cor-azul);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--cor-set);
+  border-radius: 20px;
+  border: 3px solid var(--cor-azul);
+}
+/* end formating scrollbar */
+
+.container {
+  /* overflow: hidden; */
+  position: absolute;
+  bottom: 100px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 900px;
+  min-width: 750px;
+  width: 100%;
+  gap: 10px;
+  cursor: no-drop;
+  animation: animate 1s ease-in-out forwards;
+}
+
+@keyframes animate {
+  from {
+    left: -100%;
+    filter: blur(20px);
+  }
+  to {
+    left: 0;
+  }
+}
+
+.posicoes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.posicoes h3:nth-child(1),
+.posicoes h3:nth-child(2),
+.posicoes h3:nth-child(3) {
+  background-color: var(--cor-azul);
+  color: #fff;
+}
+
+.posicoes h3:nth-child(1),
+.posicoes h3:nth-child(3) {
+  font-size: 18px;
+  padding: 3px 7px;
+  font-weight: 500;
+}
+
+.posicoes h3:nth-child(2) {
+  font-size: 20px;
+  padding: 3px 35px;
+  font-weight: 700;
+}
+
+.placares {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.placares .left,
+.placares .right {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  width: 50%;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.placares .right {
+  flex-direction: row-reverse;
+}
+
+.placares .left .left-2,
+.placares .left .left-3,
+.placares .left .left-4,
+.placares .right .right-2,
+.placares .right .right-3,
+.placares .right .right-4 {
+  min-width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+.left-1,
+.right-1 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}
+
+.left-2 {
+  background: #065711;
+  color: #fff;
+}
+
+.right-2 {
+  background: #610f11;
+  color: #fff;
+}
+
+.left-3,
+.right-3 {
+  color: #fff;
+  background: var(--cor-set);
+}
+
+.left-4,
+.right-4 {
+  background: #fff;
+  color: var(--cor-azul);
+}
+
+.left-1 {
+  border-right: 6px solid var(--cor-america);
+  border-bottom: 6px solid var(--cor-america);
+}
+
+.right-1 {
+  border-left: 6px solid var(--cor-sesi);
+  border-bottom: 6px solid var(--cor-sesi);
+}
